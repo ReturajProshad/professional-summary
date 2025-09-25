@@ -100,6 +100,16 @@ Implemented using Flutter's official `intl` package with ARB file structure.
 - **Offline access** for recently viewed documents  
 - **Bulk operations** – *planned for future release* (select multiple documents for actions like delete, share, or export)
 
+### 📁 PDF Viewer Highlights
+- Memory-efficient PDF loading with **disk-based storage** and progress tracking
+- Horizontal page swiping with snapping, previous/next buttons, and **direct page jump dialog**
+- **Table of Contents drawer** for quick navigation to sections
+- Dynamic **QR code overlay** with asset metadata on first page
+- Responsive layout and scrollable overlays for metadata display
+- State management handled via **Riverpod** (`ConsumerStatefulWidget` + `ChangeNotifierProvider`)
+- Robust **error handling** and download cancellation support
+
+
 
 ## 🎯 Key Learnings & Engineering Decisions
 
@@ -119,7 +129,7 @@ Implemented using Flutter's official `intl` package with ARB file structure.
 ### ⚡ Performance Optimization
 - **Minimized Rebuilds** – Split widgets and structured providers to avoid unnecessary widget tree rebuilds  
 - **Lazy Loading** – Implemented in heavy lists and data tables  
-- **Memory Management** – Efficient disposal of controllers and listeners; byte-stream PDF loading to reduce memory usage for large documents  
+- **Memory Management** – Efficient disposal of controllers and listeners;disk-based PDF loading to reduce memory usage, and minimized widget rebuilds.  
 - **Network Optimization** – Efficient API requests and data fetching strategies to reduce unnecessary network calls
 
 ### 🔄 Backend Communication
