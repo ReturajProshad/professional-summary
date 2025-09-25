@@ -36,14 +36,18 @@ lib/
 │   │   ├── state/         # Riverpod state management
 │   │   └── views/         # UI screens and components
 │   ├── dashboard/          # Main dashboard module
-│   ├── document_library/   # Document management
+│   ├── document_library/      # Document management (Asset Management Module)
+│   │   ├── api/               # Document APIs (CRUD, search, etc.)
+│   │   ├── models/            # File & document models
+│   │   ├── state/             # Riverpod state providers
+│   │   └── views/             # UI for library, PDF viewer, create file
 │   ├── landsourcing/       # Land sourcing features (On going)
-│   ├── configuration/      # App configuration
-|   |...................    #More Features
-|   |...................
+│   ├── configuration/        # App configuration (Access & Role Management)
+│   ├── archive/               # Archived items module
+│   └── ...more features       # (24+ independent modules in total)
 │   └── homepage/           # Home screen module
 │
-├── l10n/arb/               # ARB files for localization
+├── l10n/arb/               # Translations (EN, BN, FR)
 └── generated/              # Auto-generated intl files
 ```
 
@@ -65,21 +69,24 @@ lib/
 | **Backend** | Spring Boot | REST API services |
 | **Localization** | Flutter Intl | Multi-language support |
 
-## 🌐 Localization Support
+## 🌐 Localization
+The app is fully localized with support for multiple languages:
 
-- **English (EN)** 🇬🇧 – Primary language
-- **Bangla (BN)** 🇧🇩 – Regional language support  
-- **French (FR)** 🇫🇷 – International business language
+- **Bangla (bn_BD) 🇧🇩 – Primary language (default for Bangladeshi users)**
+- **English (en_GB) 🇬🇧 – Secondary language (international support)**
+- **French (fr_FR) 🇫🇷 – International business language**
+
 
 Implemented using Flutter's official `intl` package with ARB file structure.
 
 ## 📊 Module Highlights
 
 ### 🔐 Authentication Module
-- JWT token-based authentication
-- Automatic token refresh via Dio interceptors
-- Role-based route protection
-- Secure local storage for session management
+- **JWT authentication** with access & refresh token separation  
+- **Access token** → Used for API authorization and role-based route management  
+- **Refresh token** → Ensures seamless session renewal without re-login  
+- **Automatic token refresh** via Dio interceptors  
+- **Secure session storage** using Flutter Secure Storage
 
 ### 📈 Dashboard Module
 - Real-time data visualization
@@ -88,10 +95,11 @@ Implemented using Flutter's official `intl` package with ARB file structure.
 - Smooth animation transitions
 
 ### 📁 Document Library
-- Lazy loading with pagination
-- Advanced search and filtering
-- Offline capability for recent documents
-- Bulk operations support
+- **Lazy loading with pagination** for efficient handling of large datasets  
+- **Advanced search and filtering** by fields such as Thana, Mouza, and Country  
+- **Offline access** for recently viewed documents  
+- **Bulk operations** – *planned for future release* (select multiple documents for actions like delete, share, or export)
+
 
 ## 🎯 Key Learnings & Engineering Decisions
 
@@ -102,15 +110,17 @@ Implemented using Flutter's official `intl` package with ARB file structure.
 - Makes onboarding new team members more efficient
 
 **State Management with Riverpod**
-- Chosen over Provider/BLoC for superior testability and DI
-- Trade-off: Steeper learning curve but excellent for large applications
-- Provides compile-safe dependency injection
+- **Riverpod** for structured state management and dependency injection  
+- Provides **compile-time safety** for dependencies and state access  
+- Chosen over Provider for superior **testability and scalability** in large applications  
+- Trade-off: Steeper learning curve compared to Provider, but easier to maintain in enterprise-scale apps
+
 
 ### ⚡ Performance Optimization
-- **Minimized Rebuilds** – Strategic widget splitting using `Consumer`/`Selector`
-- **Lazy Loading** – Implemented in heavy lists and data tables
-- **Memory Management** – Efficient disposal of controllers and listeners
-- **Network Optimization** – Request deduplication and caching strategies
+- **Minimized Rebuilds** – Split widgets and structured providers to avoid unnecessary widget tree rebuilds  
+- **Lazy Loading** – Implemented in heavy lists and data tables  
+- **Memory Management** – Efficient disposal of controllers and listeners; byte-stream PDF loading to reduce memory usage for large documents  
+- **Network Optimization** – Efficient API requests and data fetching strategies to reduce unnecessary network calls
 
 ### 🔄 Backend Communication
 - **Dio Interceptors** – Automated token refresh and request retry logic
