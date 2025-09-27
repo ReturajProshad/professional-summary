@@ -168,7 +168,8 @@ class AndroidPOSService {
 - **Minimal Navigation** – Streamlined user journey
 - **Offline Resilience** – Graceful degradation when connectivity issues occur
 
-## 🚀 Getting Started (Development Perspective)
+## 🧭 Development Example (Feature-first Implementation)
+
 
 ```dart
 // Example of feature implementation
@@ -197,17 +198,74 @@ class POSService {
 }
 ```
 
+
+
 ## 📸 Application Preview
 
-*(Kiosk interface screenshots would be placed here)*
+Shimana Kiosk (FoodExpo) offers a seamless restaurant ordering experience — from onboarding to checkout and POS printing.  
+This section demonstrates the complete user flow through annotated screenshots.
 
-| Welcome Screen | Menu Browsing | Cart Management |
-|----------------|---------------|-----------------|
-| *Clean kiosk landing interface* | *Category-based product display* | *Interactive cart with customization* |
+---
 
-| Order Confirmation | POS Printing | Booking Interface |
-|-------------------|--------------|-------------------|
-| *Order summary and confirmation* | *Receipt generation workflow* | *Table reservation system* |
+### 🏁 Splash & Onboarding Flow
+
+| Splash Screen | Onboarding Step 1 | Onboarding Step 2 | Onboarding Step 3 |
+|---------------|------------------|------------------|------------------|
+| <img width="250" src="https://github.com/user-attachments/assets/cc141b92-b3ba-4ddc-bebf-1eba6007c0c3" /> | <img width="250" src="https://github.com/user-attachments/assets/6f168a6b-ce38-4ad6-b094-4f3a9d4f9341" /> | <img width="250" src="https://github.com/user-attachments/assets/3deeb0f4-69d1-4eb8-acf6-cce0ea12914e" /> | <img width="250" src="https://github.com/user-attachments/assets/20a96c2c-323a-4128-a787-21fb482d2277" /> |
+
+✨ Smooth onboarding introduces users to the kiosk features and ordering process.
+
+---
+
+### 🔐 Authentication & Settings Access
+
+| Login Screen 1 | Login Screen 2 | Hidden Settings |
+|----------------|----------------|----------------|
+| <img width="250" src="https://github.com/user-attachments/assets/bf7b4b56-89f7-459e-8885-2fe5d949487a" /> | <img width="250" src="https://github.com/user-attachments/assets/bf22fd55-0889-46d5-b007-b85c02fca814" /> | <img width="250" src="https://github.com/user-attachments/assets/0790efe0-3a93-4b2b-894d-1d1797f69621" /> |
+
+🔑 Secure login flow with hidden settings access for administrators.
+
+---
+
+### 🏠 Home & Category Browsing
+
+| Home Page | Category 1 | Category 2 | Category 3 |
+|------------|-------------|-------------|-------------|
+| <img width="250" src="https://github.com/user-attachments/assets/61307de5-584b-4ab3-9939-fa8bc769743b" /> | <img width="250" src="https://github.com/user-attachments/assets/645bf1e0-ccc5-4688-81ce-cbb64b2fb213" /> | <img width="250" src="https://github.com/user-attachments/assets/8ed7682d-c3a6-4124-9144-c4300da0f875" /> | <img width="250" src="https://github.com/user-attachments/assets/45992e29-e0de-491e-9146-f7480b4f1ee7" /> |
+
+🍽️ Browse menu items by category with large, interactive UI components optimized for kiosks.
+
+---
+
+### 🍲 Product Details & Search
+
+| Food Details 1 | Food Details 2 | Search View 1 | Search View 2 |
+|----------------|----------------|----------------|----------------|
+| <img width="250" src="https://github.com/user-attachments/assets/7f1df07c-bbcb-4635-8c0c-db07f97cbf22" /> | <img width="250" src="https://github.com/user-attachments/assets/2f42a06a-ee11-4e9f-a3c1-d01a2d2cac63" /> | <img width="250" src="https://github.com/user-attachments/assets/dc1e48a2-49ef-4432-85ea-69ebc4351c22" /> | <img width="250" src="https://github.com/user-attachments/assets/432751bc-b48a-4d79-8bfd-c0aa4a8ac253" /> |
+
+🔍 Quick search and detailed product pages with add-ons, quantity selection, and customizations.
+
+---
+
+### 🛒 Cart & Order Summary
+
+| Cart View | How to Get Invoice | Invoice Summary |
+|------------|------------------|----------------|
+| <img width="250" src="https://github.com/user-attachments/assets/94dcb657-3cc5-4387-9908-4b474607ef14" /> | <img width="250" src="https://github.com/user-attachments/assets/7dea0e86-d6e4-48ba-ad53-d59624660f48" /> | <img width="250" src="https://github.com/user-attachments/assets/6005ced1-5446-4893-b143-4df2cb4101c1" /> |
+
+🧾 Cart management supports item edits, quantity changes, and smooth checkout flow with invoice generation.
+
+---
+
+### 🧾 POS Printing & Mobile Integration
+
+| POS Invoice Print | Mobile QR Scan | Invoice PDF |
+|------------------|----------------|--------------|
+| <img width="250" src="https://github.com/user-attachments/assets/82495d6c-092d-4b7a-874f-6cbe4947367c" /> | <img width="250" src="https://github.com/user-attachments/assets/8d98dcaa-1046-4caf-9e56-68d5b5fa925b" /> | <img width="250" src="https://github.com/user-attachments/assets/84e4dd09-ccc2-4447-8082-121429d7e3fc" /> |
+
+🖨️ Integrated POS printing and mobile-friendly QR scanning bridge kiosk ordering with restaurant operations.
+
+---
 
 ## 👨‍💻 Author
 
@@ -228,13 +286,6 @@ Flutter Developer specializing in cross-platform applications, kiosk systems, an
 
 *"Building intuitive kiosk experiences with robust hardware integration and cross-platform compatibility"*
 
-</div>
-
-## 🔗 Project Links
-
-- **📋 FoodExpo Project Documentation**: [View Detailed Architecture](https://github.com/ReturajProshad/professional-summary/blob/main/FOODEXPO.md)
-- **🏢 ODCL Portfolio**: [All Professional Projects](https://github.com/ReturajProshad/professional-summary)
 
 ---
 
-*Last Updated: ${new Date().toLocaleDateString()}*
