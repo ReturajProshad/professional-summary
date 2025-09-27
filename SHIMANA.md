@@ -129,7 +129,7 @@ Implemented using Flutter's official `intl` package with ARB file structure.
 ### ⚡ Performance Optimization
 - **Minimized Rebuilds** – Split widgets and structured providers to avoid unnecessary widget tree rebuilds  
 - **Lazy Loading** – Implemented in heavy lists and data tables  
-- **Memory Management** – Efficient disposal of controllers and listeners;disk-based PDF loading to reduce memory usage, and minimized widget rebuilds.  
+- **Memory Management** – Efficient disposal of controllers and listeners; disk-based PDF loading to reduce memory usage, and minimized widget rebuilds.  
 - **Network Optimization** – Efficient API requests and data fetching strategies to reduce unnecessary network calls
 
 ### 🔄 Backend Communication
@@ -138,12 +138,35 @@ Implemented using Flutter's official `intl` package with ARB file structure.
 - **Type Safety** – Full model serialization/deserialization
 
 ## 📸 Application Preview
+Shimana features a multilingual, dynamic, and visually rich interface. Below are some previews of key screens across different locales (🇧🇩 Bengali, 🇫🇷 French, 🇬🇧 English).
 
-*(Screenshots would be placed here in an actual portfolio)*
+## 🧭 Splash & Authentication
+| Splash Screen                                                                                                                 | Login Screen                                                                                                                 |
+| ----------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| <img width="300" alt="splash_screen" src="https://github.com/user-attachments/assets/1a4a9772-6292-4a31-8f78-dbf1c8454a5d" /> | <img width="300" alt="login_screen" src="https://github.com/user-attachments/assets/f18d6901-402a-4d49-8b1e-f73469c1f57a" /> |
 
-| Login Screen | Dashboard | Document Management |
-|-------------|-----------|---------------------|
-| *Modern auth UI with validation* | *Role-based dashboard layout* | *Advanced filtering interface* |
+✨ A sleek splash screen transitions smoothly into a modern login interface with validation and localization support.
+
+## 🏠 Dashboard & Navigation
+| Locale           | Dashboard                                                                                                                     | Drawer                                                                                                                       |
+| ---------------- | ----------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| 🇧🇩 **Bangla**  | <img width="300" alt="dash_board_BN" src="https://github.com/user-attachments/assets/b79f09f0-b4af-47f5-89ec-dfc7b6691420" /> | <img width="300" alt="appdrawer_BN" src="https://github.com/user-attachments/assets/64e84e41-5b22-4997-8cdd-35c1d10f8bdd" /> |
+| 🇫🇷 **French**  | <img width="300" alt="dash_board_FR" src="https://github.com/user-attachments/assets/d3a275ac-49cd-4161-a7f0-8e0a8fb4f7cb" /> | <img width="300" alt="appDrawer_FR" src="https://github.com/user-attachments/assets/73813bb3-d77f-4b8b-ac65-18f0680f0d49" /> |
+| 🇬🇧 **English** | <img width="300" alt="dash_board_EN" src="https://github.com/user-attachments/assets/2bced5b3-72eb-4248-8f30-abb2b77ab3ac" /> | <img width="300" alt="appdrawer_EN" src="https://github.com/user-attachments/assets/a05034cf-40e2-4c6e-9002-6f61d5b7bd6e" /> |
+
+🌐 Multilingual UI: Shimana supports multiple languages dynamically with localized dashboards and menus.
+
+## 🧭 Filtering & Dynamic Views
+| Project List With Pagination (BN)                                                                                                               | Filter (EN)                                                                                                               |
+| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| <img width="300" alt="dashboard_BN" src="https://github.com/user-attachments/assets/4cff114b-54c5-4cfd-bf8d-8baab99cef19" /> | <img width="300" alt="Filter_EN" src="https://github.com/user-attachments/assets/4d2af058-a69b-4ced-be4d-686db88bbb6c" /> |
+
+🔍 Powerful filtering and adaptive dashboards make navigation effortless.
+
+## 📚 Document Management & PDF Handling
+| PDF Loading                                                                                                                 | Table of Contents                                                                                                       | Overlay View                                                                                                                |
+| --------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| <img width="300" alt="Pdf_loading" src="https://github.com/user-attachments/assets/6c014f5a-f52c-437f-8710-7d71808d1773" /> | <img width="300"  alt="pdf_TOC" src="https://github.com/user-attachments/assets/196d43e4-4ec3-4fa0-a23a-b82bfd74d0fd" /> | <img width="300"  alt="PDF_Overlay" src="https://github.com/user-attachments/assets/9bf755b4-40ce-44af-9977-cabbb875f51f" /> |
 
 ## 🚀 Getting Started (Development Perspective)
 
@@ -154,12 +177,20 @@ class AssetManagementScreen extends ConsumerWidget {
   
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final assetsAsync = ref.watch(assetsProvider);
-    
-    return assetsAsync.when(
-      loading: () => const LoadingSlice(),
-      error: (error, stack) => ErrorView(error: error),
-      data: (assets) => AssetListView(assets: assets),
+    final assetState = ref.watch(assetsProvider);
+
+    return Scaffold(
+      appBar: AppBar(title: const Text('Asset Management')),
+      body: Column(
+        children: [
+          if (assetState.isLoading) const LoadingSlice(),
+          if (assetState.error != null)
+            ErrorView(error: assetState.error!),
+          Expanded(
+            child: AssetListView(assets: assetState.assetList),
+          ),
+        ],
+      ),
     );
   }
 }
