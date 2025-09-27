@@ -141,9 +141,12 @@ Implemented using Flutter's official `intl` package with ARB file structure.
 Shimana features a multilingual, dynamic, and visually rich interface. Below are some previews of key screens across different locales (🇧🇩 Bengali, 🇫🇷 French, 🇬🇧 English).
 
 ## 🧭 Splash & Authentication
-| Splash Screen                                                                                                                 | Login Screen                                                                                                                 |
-| ----------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| <img width="300" alt="splash_screen" src="https://github.com/user-attachments/assets/1a4a9772-6292-4a31-8f78-dbf1c8454a5d" /> | <img width="300" alt="login_screen" src="https://github.com/user-attachments/assets/f18d6901-402a-4d49-8b1e-f73469c1f57a" /> |
+
+
+
+| Start | Splash Screen                                                                                                                 | Login Screen                                                                                                                 |
+| ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| <video src="https://github.com/user-attachments/assets/c183b10c-f527-43af-abb5-f824df51c133" width="300" controls></video> | <img width="300" alt="splash_screen" src="https://github.com/user-attachments/assets/1a4a9772-6292-4a31-8f78-dbf1c8454a5d" /> | <img width="300" alt="login_screen" src="https://github.com/user-attachments/assets/f18d6901-402a-4d49-8b1e-f73469c1f57a" /> |
 
 ✨ A sleek splash screen transitions smoothly into a modern login interface with validation and localization support.
 
@@ -167,6 +170,27 @@ Shimana features a multilingual, dynamic, and visually rich interface. Below are
 | PDF Loading                                                                                                                 | Table of Contents                                                                                                       | Overlay View                                                                                                                |
 | --------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
 | <img width="300" alt="Pdf_loading" src="https://github.com/user-attachments/assets/6c014f5a-f52c-437f-8710-7d71808d1773" /> | <img width="300"  alt="pdf_TOC" src="https://github.com/user-attachments/assets/196d43e4-4ec3-4fa0-a23a-b82bfd74d0fd" /> | <img width="300"  alt="PDF_Overlay" src="https://github.com/user-attachments/assets/9bf755b4-40ce-44af-9977-cabbb875f51f" /> |
+
+
+## 🧩 Role Management Preview
+
+> A robust user & role configuration module designed for fine-grained access control, enabling administrators to manage permissions, roles, and user details seamlessly.
+
+| User Management                                                                                                                 | Role Management                                                                                                                 | Edit User                                                                                                                 | Configuration                                                                                                                 |
+| ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| <img width="300" alt="user_management" src="https://github.com/user-attachments/assets/e45a59f3-028e-4f4c-a22b-0720b0813be0" /> | <img width="300" alt="role_management" src="https://github.com/user-attachments/assets/ec447e8f-d687-48b2-a521-d3300967dc58" /> | <img width="300" alt="edit_user" src="https://github.com/user-attachments/assets/2c046666-56ee-4ccb-a4c8-d310813fa0e5" /> | <img width="300" alt="configuration" src="https://github.com/user-attachments/assets/4a27288d-1cd1-4d59-b998-e91b0748b66c" /> |
+
+### 🔍 Key Capabilities
+
+- **👥 User Management** – View, create, and maintain user accounts with role assignments  
+- **🧠 Role Management** – Define granular access levels using dynamic permission mapping  
+- **✏️ Edit User** – Update user information, assign or revoke roles in real time  
+- **⚙️ Configuration** – Centralized settings to customize access policies & system behavior  
+
+---
+
+> 🧭 Designed with scalability in mind — the module follows a **role-based access control (RBAC)** pattern, ensuring maintainable permission logic and clear separation of responsibilities.
+
 
 ## 🚀 Getting Started (Development Perspective)
 
