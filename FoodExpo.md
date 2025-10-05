@@ -249,9 +249,9 @@ This section demonstrates the complete user flow through annotated screenshots.
 
 ### 🛒 Cart & Order Summary
 
-| Cart View | How to Get Invoice | Invoice Summary |
-|------------|------------------|----------------|
-| <img width="250" src="https://github.com/user-attachments/assets/94dcb657-3cc5-4387-9908-4b474607ef14" /> | <img width="250" src="https://github.com/user-attachments/assets/7dea0e86-d6e4-48ba-ad53-d59624660f48" /> | <img width="250" src="https://github.com/user-attachments/assets/6005ced1-5446-4893-b143-4df2cb4101c1" /> |
+| Cart View | Book Table | How to Get Invoice | Invoice Summary |
+|------------|----------------|------------------|----------------|
+| <img width="250" src="https://github.com/user-attachments/assets/94dcb657-3cc5-4387-9908-4b474607ef14" /> | <img width="250" alt="tale" src="https://github.com/user-attachments/assets/7f938f96-257b-4b7d-8ef7-10a9f7101a96" /> | <img width="250" src="https://github.com/user-attachments/assets/7dea0e86-d6e4-48ba-ad53-d59624660f48" /> | <img width="250" src="https://github.com/user-attachments/assets/6005ced1-5446-4893-b143-4df2cb4101c1" /> |
 
 🧾 Cart management supports item edits, quantity changes, and smooth checkout flow with invoice generation.
 
