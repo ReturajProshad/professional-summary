@@ -94,6 +94,9 @@ lib/
 
 ---
 
+## 📸 Application Preview
+- Available Soon
+
 ## 🗄️ Multi-Database Architecture
 
 The application utilizes a **Bootstrap Factory** pattern to initialize the correct backend at runtime based on environment configurations. This ensures that the UI layer interacts with a generic interface, regardless of the underlying database technology.
