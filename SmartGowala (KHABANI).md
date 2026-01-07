@@ -404,11 +404,12 @@ test('PostgresAuthRepository login', () async {
 
 ## 📞 Let's Connect
 
-**I'm actively seeking Role Time Flutter roles where I can:**
-- Architect scalable mobile solutions for large-scale user bases
-- Lead technical decisions and mentor development teams
-- Solve complex business problems with elegant technical solutions
-- Bridge the gap between business requirements and technical implementation
+**I'm actively seeking Flutter roles where I can grow as an engineer while contributing at scale, including opportunities to:**
+- Learn from experienced engineers and evolve my approach to large-scale mobile architecture
+- Contribute to designing scalable, maintainable Flutter systems in real-world products
+- Deepen my understanding of clean architecture, backend integration, and performance optimization
+- Collaborate closely with product, backend, and design teams to solve complex business problems
+- Gradually take on more ownership and technical responsibility while mentoring where appropriate
 
 **Available for:**
 - Full-time, part-time, or contract senior/mid-level Flutter roles
