@@ -43,6 +43,34 @@ The application is built using **Clean Architecture** principles organized into 
 
 </div>
 
+---
+
+## 🧱 SOLID Principles in Practice (Production Usage)
+
+Smart Gowala (Khabani) — it is designed using **SOLID principles applied at scale**, ensuring long-term maintainability as features, users, and backends grow.
+
+Rather than theoretical explanations, the following table maps each SOLID principle directly to **real architectural decisions implemented in this codebase**:
+
+| SOLID Principle | Where It Lives in Smart Gowala |
+|----------------|--------------------------------|
+| **S — Single Responsibility** | Feature-first folders, isolated UseCases, dedicated Validators, UI-only Widgets |
+| **O — Open/Closed** | Repository pattern with backend switching (Firebase / PostgreSQL / Spring Boot) |
+| **L — Liskov Substitution** | Multiple repository implementations interchangeable without UI or domain changes |
+| **I — Interface Segregation** | Small, module-specific repository contracts (Auth, Cattle, Finance, Reproduction) |
+| **D — Dependency Inversion** | UseCases depend on abstractions, injected via Riverpod providers |
+
+### Why This Matters
+
+- **Backend migration readiness** → Firestore → REST API without rewriting business logic
+- **Team scalability** → UI, Domain, and Data layers evolve independently
+- **Testability** → Business rules tested without Flutter or database dependencies
+- **Enterprise longevity** → Domain logic survives framework, database, and infrastructure changes
+
+This approach ensures that **business rules remain stable**, while UI frameworks, databases, and delivery mechanisms stay replaceable — a core requirement for enterprise and long-lived products.
+
+---
+
+
 ### **Feature-First Modular Structure**
 
 ```
@@ -349,7 +377,7 @@ test('PostgresAuthRepository login', () async {
 ## 👨‍💻 Author
 
 **Returaj**  
-*Flutter Engineer specializing in enterprise architecture, multi-backend systems, and performance-driven applications.*
+**Mobile Software Engineer** focused on **scalable Flutter architecture, multi-backend systems, and long-lived business logic.**
 
 ---
 
