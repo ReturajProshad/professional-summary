@@ -49,7 +49,7 @@ The application is built using **Clean Architecture** principles organized into 
 
 Smart Gowala (Khabani) — it is designed using **SOLID principles applied at scale**, ensuring long-term maintainability as features, users, and backends grow.
 
-Rather than theoretical explanations, the following table maps each SOLID principle directly to **real architectural decisions implemented in this codebase**:
+The following table maps each SOLID principle directly to **real architectural decisions implemented in this codebase**:
 
 | SOLID Principle | Where It Lives in Smart Gowala |
 |----------------|--------------------------------|
