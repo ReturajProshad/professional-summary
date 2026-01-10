@@ -54,7 +54,7 @@ The following table maps each SOLID principle directly to **real architectural d
 | SOLID Principle | Where It Lives in Smart Gowala |
 |----------------|--------------------------------|
 | **S — Single Responsibility** | Feature-first folders, isolated UseCases, dedicated Validators, UI-only Widgets |
-| **O — Open/Closed** | Repository pattern with backend switching (Firebase / PostgreSQL / Spring Boot) |
+| **O — Open/Closed** | Repository pattern with backend switching (Firebase / PostgreSQL / Spring Boot) and (Metadata-Driven Form Engine,and the Pagination System) |
 | **L — Liskov Substitution** | Multiple repository implementations interchangeable without UI or domain changes |
 | **I — Interface Segregation** | Small, module-specific repository contracts (Auth, Cattle, Finance, Reproduction) |
 | **D — Dependency Inversion** | UseCases depend on abstractions, injected via Riverpod providers |
