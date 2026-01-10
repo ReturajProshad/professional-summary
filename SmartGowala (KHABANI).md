@@ -6,7 +6,7 @@
 
 ## 🚀 Key Highlights
 
-- **🗄️ Multi-Database Strategy** – Runtime switching between Firebase, PostgreSQL, and Spring Boot via Factory Pattern.
+- **🗄️ Multi-Database Strategy** – Build-time configured, runtime-resolved backend selection (Firebase, PostgreSQL, Spring Boot) via Factory Pattern..
 - **📝 Metadata-Driven Forms** – Dynamic UI engine that renders 90+ complex forms from JSON-like schemas, drastically reducing boilerplate.
 - **🔐 Dynamic RBAC** – Granular, real-time permission system controlling route access and UI visibility.
 - **📊 Centralized Pagination** – Generic data handling module for scalable list views and search.
@@ -127,7 +127,7 @@ lib/
 
 ## 🗄️ Multi-Database Architecture
 
-The application utilizes a **Bootstrap Factory** pattern to initialize the correct backend at runtime based on environment configurations. This ensures that the UI layer interacts with a generic interface, regardless of the underlying database technology.
+The application utilizes a **Bootstrap Factory** pattern to initialize the correct backend at runtime during app bootstrap, based on build-time environment configuration. This ensures that the UI layer interacts with a generic interface, regardless of the underlying database technology.
 
 ### **Repository Pattern: The Abstraction Layer**
 The Data layer implements the Repository pattern to swap backends without affecting the Domain or Presentation layers.
@@ -178,6 +178,42 @@ void main() async {
 
 ---
 
+## 🔄 Backend Selection Strategy (Build-Time Configured, Runtime Resolved)
+
+Smart Gowala supports multiple backend implementations (**Firebase**, **PostgreSQL**, **Spring Boot**) using a **controlled environment-based selection strategy**.
+
+**Backend selection is:**
+
+* **Configured at build-time** using `--dart-define`
+* **Resolved at runtime** during application bootstrap
+* **Immutable for the entire app lifecycle**
+
+### Build Commands
+
+```bash
+# Firebase version
+flutter build apk --dart-define=BACKEND_TYPE=firestore
+
+# PostgreSQL version
+flutter build apk --dart-define=BACKEND_TYPE=direct_postgres
+
+# Spring Boot version
+flutter build apk --dart-define=BACKEND_TYPE=spring_boot
+```
+
+At runtime, the application reads the environment value and injects the corresponding repository implementation via a **Bootstrap Factory**, while keeping the **UI** and **Domain** layers fully decoupled.
+
+### This approach ensures:
+
+* **Predictable production behavior**
+* **Security and stability** (no live backend mutation)
+* **Client-specific builds** without code changes
+* **Strict adherence to Dependency Inversion**
+
+> ⚠️ **Note:** Backend switching does **not** occur dynamically while the app is running.
+> Each build is intentionally bound to a **single backend** for its entire lifecycle.
+
+---
 ## 🎯 Key Technical Features
 
 ### 1. 📝 Metadata-Driven Form Engine
