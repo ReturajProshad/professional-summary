@@ -1,6 +1,6 @@
 # 🚀 Smart Gowala (Khabani) – Enterprise Livestock Management System
 
-> **Senior-Level Flutter Architecture Showcase** - A production-ready mobile application demonstrating clean architecture, multi-backend integration, and enterprise-scale state management for a comprehensive livestock management system.
+> **Architecture Showcase** - A production-ready mobile application demonstrating clean architecture, multi-backend integration, and enterprise-scale state management for a comprehensive livestock management system.
 
 ---
 
