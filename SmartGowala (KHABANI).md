@@ -78,13 +78,6 @@ lib/
 ├── core/                         # App-wide reusable infrastructure
 │   ├── config/                  # Environment & app configuration
 │   ├── constants/               # Global constants
-│   ├── data/                    # Data layer (implementations)
-│   │   ├── datasources/         # Firebase, PostgreSQL, API, Cache
-│   │   ├── models/              # Source-specific DTOs
-│   │   └── repositories/        # Concrete repository implementations
-│   ├── domain/                  # Business logic (framework-agnostic)
-│   │   ├── entities/            # Core business entities
-│   │   └── repositories/        # Abstract contracts
 │   ├── network/                 # API clients & database clients
 │   ├── router/                  # Centralized navigation & transitions
 │   ├── service/                 # Bootstrap, pagination, role providers
@@ -92,7 +85,14 @@ lib/
 │   ├── utils/                   # Responsive helpers & utilities
 │   └── widgets/                 # Reusable UI components
 │
-├── features/                     # Independent feature modules
+├── data/                        # Data layer (implementations)
+│   ├── datasources/             # Firebase, PostgreSQL, API, Cache
+│   ├── models/                  # Source-specific DTOs
+│   └── repositories/            # Concrete repository implementations
+├── domain/                      # Business logic (framework-agnostic)
+│   ├── entities/                # Core business entities
+│   └── repositories/            # Abstract contracts
+├── features/                    # Independent feature modules
 │   ├── auth/                    # Authentication & session handling
 │   ├── dashboard/               # Role-based dashboards
 │   ├── config/                  # User, role & permission management
