@@ -494,7 +494,9 @@ One codebase serves all three without compromise.
 >
 > **What's Demonstrated:** Clean Architecture implementation · Multi-database strategy · Metadata-driven form engine · Dynamic RBAC · Full ERP module design · Double-entry GL engine
 >
-> **Intellectual Property:** All architectural patterns and code organization are original work. Database schemas, business models, and proprietary algorithms remain confidential property of **One Direction Companies Limited**.
+> **Intellectual Property:** The architectural patterns, system design, and engineering decisions 
+demonstrated here are the original work of the author. The product, business data, and 
+proprietary business logic remain the property of **One Direction Companies Limited**.
 
 ---
 
